@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool comp(const pair<int,int>&a,const pair<int,int>&b)
+{
+    return a.second<b.second;
+}
+int main() {
+    // Write C++ code here
+    vector<int>A;
+    A.push_back(1);
+    A.push_back(2);
+    A.push_back(3);
+    A.push_back(4);
+    /*A.pop_back();
+    auto x=A.rbegin();
+    auto y=A.rend()-1;
+    sort(A.rbegin(),A.rend());
+    for (auto it:A)
+    {
+        cout<<it<<" ";
+    }
+    cout<<*x<<" "<<*y;*/
+    vector<pair<int,int>>p;
+    p.push_back({10,20});
+    p.push_back({10,12});
+    p.push_back({10,19});
+    sort(p.begin(),p.end(),comp);
+    for (auto it:p)
+    {
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+    return 0;
+}
